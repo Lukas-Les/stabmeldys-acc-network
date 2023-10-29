@@ -1,0 +1,11 @@
+service: network
+
+provider:
+  name: aws
+  region: eu-central-1
+  stackName: network
+
+
+resources:
+  - ${file(resources/vpc.yml)}
+  - ${file(resources/outputs.yml)}
